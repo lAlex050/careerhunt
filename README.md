@@ -1,4 +1,5 @@
 # careerhunt
+
 A backend-oriented REST API for tracking job applications throughout the
 hiring process. Built as a personal project to deepen my understanding
 of Spring Boot, PostgreSQL, authentication, and clean backend architecture.
@@ -7,7 +8,8 @@ of Spring Boot, PostgreSQL, authentication, and clean backend architecture.
 
 careerhunt lets a user log every job they apply to, manage the application
 through its lifecycle (Applied → Interview → Offer / Rejected), store
-notes from interviews, and view stats about their search. The focus is on a solid, well-tested backend — clean REST endpoints,
+notes from interviews, and view stats about their search. The focus is on a solid, well-tested backend — clean REST
+endpoints,
 real authentication, proper database design, and migrations.
 
 ## Why this project
