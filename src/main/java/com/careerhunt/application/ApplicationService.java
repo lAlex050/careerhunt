@@ -3,6 +3,7 @@ package com.careerhunt.application;
 import com.careerhunt.application.dto.ApplicationCreateRequest;
 import com.careerhunt.application.dto.ApplicationResponse;
 import com.careerhunt.exception.ApplicationNotFoundException;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,6 +35,13 @@ public class ApplicationService {
                 .orElseThrow(()-> new ApplicationNotFoundException(id));
 
         return applicationMapper.toResponse(application);
+    }
+
+    public void deleteApplicationById(Long id) {
+        if(!applicationRepository.existsById(id)) {
+            throw new ApplicationNotFoundException(id);
+        }
+        applicationRepository.deleteById(id);
     }
 
 }
